@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  mongo:
+    image: mongo:4.0.16
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/data/db
+  
+  public_stash_api_parser:
+    build: .
+
+
+volumes:
+  mongo:
