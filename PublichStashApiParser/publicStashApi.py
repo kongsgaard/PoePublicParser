@@ -44,7 +44,7 @@ class PublicStashApi:
 
         request_url = POE_PUBLIC_STASH_API_BASE_URL + '?id=' + self.next_id
         
-        self.logger.info('Requesting next stash api, with next_id: %s', self.next_id)
+        self.logger.info('Requesting next stash update, from url: %s', request_url)
 
         return self.session.get(request_url).text
 
